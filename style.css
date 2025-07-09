@@ -11,15 +11,21 @@
   --black:  #111111;
   --skyblue:#01ACFD;
   --orange:#FEA301;
+  --full-White: #ffffff;
   --max-width: 1440px;
 }
 
+body{
+  overflow-x: hidden;
+}
 .navBar {
+  width: var(--max-width);
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: var(--white);
+  background-color: var(--full-White);
 }
 
 
@@ -74,8 +80,7 @@
 
 
 /* nav button part */
-.contact
-  {
+.contact, .enroll{
   background-color: var(--orange);
   color: var(--white);
   border: none;
@@ -85,6 +90,11 @@
   border-radius: 10px;
 }
 
+.contact:hover{
+  background-color: var(--skyblue);
+}
+
+
 .bars{
   display: none;
   border: none;
@@ -93,8 +103,59 @@
 
 }
 
+/* banner section styles */
+
+.banner{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--full-white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  align-items: center;
+}
+
+.bannerContent{
+  width: 100%;
+}
+
+.bannerContent h2{
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: 0%;
+}
 
 
+.headingStart{
+  color: var(--skyblue);
+}
+
+.headingEnd{
+  color: var(--orange);
+}
+
+.bannerContent p{
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: auto;
+  letter-spacing: 0%;
+}
+
+.enroll{
+  background-color: var(--black);
+}
+
+.enroll:hover{
+  background-color: var(--orange);
+}
+
+
+
+.bannerImage img{
+  width: 100%;
+}
 
 
 
@@ -112,7 +173,11 @@
 @media screen and (max-width: 576px){
 
   .navBar {
+    max-width: 90%;
+    margin: 0 auto;
     align-items: center;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   .branding>h1,.navLinks, .contact {
@@ -122,4 +187,80 @@
   .bars{
     display: block;
   }
+
+  /* banner section */
+  .banner{
+    grid-template-columns:  repeat(1,1fr);
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .bannerContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+  }
+  .bannerContent h2{
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+
+  .bannerContent p{
+    font-size: 1rem;
+    padding: 0;
+    margin-bottom: 20;
+  }
+
+  .enroll{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px
+  }
+
+  .bannerImage{
+    order: 1;
+  }
+}
+
+
+
+/* mid device */
+@media screen and (min-width:576px) and (max-width:992px) {
+
+/* nav section  */
+
+  .navBar{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navLinks>ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact{
+    display: none;
+  }
+
+
+  /* banner section */
+
+  /* .banner{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--full-white);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  align-items: center;
+} */
+
+  
 }

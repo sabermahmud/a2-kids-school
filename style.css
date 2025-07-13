@@ -167,7 +167,7 @@ body{
 .curriculum{
   max-width: var(--max-width);
   margin: 20px auto;
-  background-image: url(/assets/bg.png);
+  background-image: url(assets/bg.png);
 }
 
 .curriculum h2{
@@ -252,7 +252,7 @@ body{
 /* our story section style */
 
 .storyContainer{
-  max-width: 1440px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 120px;
   background-image: linear-gradient(to bottom, #FFFFFF,  #fea10152), url(/assets/bg.png);
@@ -326,6 +326,86 @@ body{
 }
 
 
+/* footer section styles */
+
+.footerContainer{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--skyblue);
+  padding: 100PX;
+  
+}
+
+.brandColumn{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  text-align: start;
+  padding: 120px;
+}
+
+.footerBranding{
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.footerBranding>h2{
+  font-size: 2.8rem;
+}
+
+.footerBranding>img{
+  width: 90px;
+}
+
+.brandColumn>p{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--white);
+  padding: 5px;
+}
+
+.footNav{
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: var(--white);
+}
+
+.footNav a{
+  text-decoration: none;
+  color: var(--white);
+  padding: 20px 0;
+}
+
+
+.socialLinks{
+  width: 100%;
+  height: auto;
+  color: var(--white);
+  text-align: center;
+}
+
+.socialHeading{
+  font-size: 1.8rem;
+}
+
+.footerIcons{
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
 
 
 
@@ -486,7 +566,14 @@ body{
     bottom: -18px;
   }
 
+  .footerContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
   .hidden{
     display: none;
   }
+
+  
 }

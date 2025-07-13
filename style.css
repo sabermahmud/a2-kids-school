@@ -262,6 +262,12 @@ body{
   background-repeat: no-repeat;
 }
 
+.storyHeading{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
 .storyCards{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -549,6 +555,8 @@ body{
     align-items: center;
     align-content: center;
   }
+
+
 
   .otherStory{
   max-width: 100%;
